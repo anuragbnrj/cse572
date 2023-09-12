@@ -1,0 +1,23 @@
+README
+
+Steps to Execute Code:
+1.	Ensure python 3.8 and pandas is installed in your system.
+2.	Unzip the project and open the project directory.
+3.	For windows: Open command prompt / PowerShell. For Linux / Mac: Open terminal
+4.	Run python main.py in the terminal.
+5.	Check the results in Results.csv.
+NOTE: [add any necessary notes]
+Link to resource(s) [if/as needed]
+Further step-by-step instructions if/as needed
+Steps done to generate results
+1.	Read in both the csv files. While reading the file I have parsed the date and time columns into a single column.
+2.	Find the timestamp of the first automode row in insulin data file.
+3.	Remove null columns from cgm data.
+4.	Find the dates in cgm data file and thereby find dates with required number of data points (80% of 288 = 230.4 [I have taken 231 since it should be an integer and the smallest integer greater than 230.4 is 231)
+5.	Filtered data for the required dates.
+6.	Divide the dataset into manual data and auto mode data.
+7.	Calculate all three metrics according for manual and auto mode. For metric calculation I have found out the unique number of days containing the data for a particular datapoint like hyperglycemia and also the percentage for that datapoint for that day. Finally, I have divided the total percent by the number of unique datapoints.
+8.	Write the data to Results.csv file. 
+
+
+
